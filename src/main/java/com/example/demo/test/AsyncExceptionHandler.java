@@ -9,8 +9,8 @@ public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
 
     @Override
     public void handleUncaughtException(Throwable throwable, Method method, Object... obj) {
-        System.out.println("Message from exception - " + throwable.getMessage());
-        System.out.println("Method name " + method.getName());
+        System.out.println(Thread.currentThread().getName() + " :: Message from exception - " + throwable.getMessage());
+        System.out.println(Thread.currentThread().getName() + " :: Method name " + method.getName());
     }
 
 }
